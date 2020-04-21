@@ -56,6 +56,7 @@ def start_spider():
         while not product_num.isdigit() or int(product_num) > len(result_list):
             print("请输入正确的编号")
             product_num = input("请输入要爬取的作品编号：")
+        flag = False
         result = result_list[int(product_num) - 1]
         if not os.path.exists('./{}'.format(result["product_name"])):
             os.mkdir('./{}'.format(result["product_name"]))
